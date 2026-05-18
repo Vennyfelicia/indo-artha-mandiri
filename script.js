@@ -9,3 +9,20 @@ toggleBtn.addEventListener("click", () => {
     toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
   }
 });
+
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+sections.forEach(sec => {
+  sec.classList.add("reveal");
+  observer.observe(sec);
+});
