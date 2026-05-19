@@ -19,6 +19,44 @@
     <div class="container">
 
       <div class="section-title">
+
+        <!-- ===== MINI RAD 3D ===== -->
+
+<div class="rad-hero">
+
+  <div class="rad-slider">
+
+    <div class="rad-item"><img src="assets/con1.jpg" alt=""></div>
+    <div class="rad-item"><img src="assets/con2.jpg" alt=""></div>
+    <div class="rad-item"><img src="assets/con3.jpg" alt=""></div>
+    <div class="rad-item"><img src="assets/con4.jpg" alt=""></div>
+    <div class="rad-item"><img src="assets/con5.jpg" alt=""></div>
+    <div class="rad-item"><img src="assets/con6.jpg" alt=""></div>
+    <div class="rad-item"><img src="assets/con7.jpg" alt=""></div>
+    <div class="rad-item"><img src="assets/con8.jpg" alt=""></div>
+    <div class="rad-item"><img src="assets/con9.jpg" alt=""></div>
+    <div class="rad-item"><img src="assets/con10.jpg" alt=""></div>
+    <div class="rad-item"><img src="assets/con11.jpg" alt=""></div>
+    <div class="rad-item"><img src="assets/con12.jpg" alt=""></div>
+    <div class="rad-item"><img src="assets/con13.jpg" alt=""></div>
+    <div class="rad-item"><img src="assets/con14.jpg" alt=""></div>
+    <div class="rad-item"><img src="assets/con15.jpg" alt=""></div>
+    <div class="rad-item"><img src="assets/con16.jpg" alt=""></div>
+    <div class="rad-item"><img src="assets/con17.jpg" alt=""></div>
+    <div class="rad-item"><img src="assets/con18.jpg" alt=""></div>
+
+  </div>
+
+</div>
+
+<!-- ===== IMAGE MODAL ===== -->
+
+<div class="rad-modal" id="radModal">
+
+  <img src="" id="radModalImg">
+
+</div>
+        
         <span>OUR PROJECTS</span>
         <h2>Construction & Design-Build</h2>
       </div>
@@ -104,6 +142,30 @@
     </div>
 
   </section>
+
+  <script>
+
+const radModal = document.getElementById("radModal");
+const radModalImg = document.getElementById("radModalImg");
+
+document.querySelectorAll(".rad-item img").forEach(img => {
+
+  img.onclick = () => {
+
+    radModal.style.display = "flex";
+    radModalImg.src = img.src;
+
+  };
+
+});
+
+radModal.onclick = () => {
+
+  radModal.style.display = "none";
+
+};
+
+</script>
 
 </body>
 
